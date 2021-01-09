@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<body>
+    <nav  class="navbar navbar-expand-lg navbar-light" style="background-color: blueviolet;">
+        <a class="navbar-brand" href="#">Barre de Navigation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Page d'accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html">À propos de moi</a>
+            <!--Barre de navigation plus 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+            --> 
+          </ul>
+        </div>
+      </nav>
+    <h3 style="padding: 20px">Bonjour, cette application web devrait vous aider dans la rédaction de votre lettre de motivation du type "Je, Vous, Nous"</h3>
+ 
+<!--Premier module -->  
+    <div id="two-way-binding">
+    <div class="jumbotron"  style="background-color:white; padding: 0px; ">
+        
+<h5>Chère Madame, Cher Monsieur,</h5> 
+<h5 style="white-space:pre-line;">Après une expérience réussi dans {{ message }}</h5>
+    <textarea v-model="message" 
+            placeholder="Décrire ici les tâches effectuées. (Par exemple: la vente de chaussures)."></textarea>
+       
+        
+    </div> 
+    </div>
+      </div>
+      <script>
+          const TwoWayBinding = {
+  data() {
+    return {
+      message: ''
+    }
+  }
+}
+Vue.createApp(TwoWayBinding).mount('#two-way-binding')
+      </script>
+
+<!--Second module -->
+<div id="tree-way-binding">
+    <div class="jumbotron"  style="background-color:white; padding: 0px; ">
+        
+
+<h5 style="white-space:pre-line;">j'ai découvert ma passion pour {{ message }}</h5>
+    <textarea v-model="message" placeholder="Décrire d'autres aspects du métier (par exemple: le service client, le commerce...)."></textarea>
+       
+        
+    </div> 
+    </div>
+      </div>
+      <script>
+          const TreeWayBinding = {
+  data() {
+    return {
+      message: ''
+    }
+  }
+}
+Vue.createApp(TreeWayBinding).mount('#tree-way-binding')
+      </script>      
+
+
+<!--troisieme module -->
+
+<div id="four-way-binding">
+    <div class="jumbotron"  style="background-color:white; padding: 0px; ">
+        
+
+<h5 style="white-space:pre-line;">J'aimerais continuer d'exercer ce métier dans votre entreprise car elle est le synonyme même de {{ message }}</h5>
+    <textarea v-model="message" placeholder="Dire pourquoi cette entreprise est genial (par exemple: la maroquinerie de luxe)."></textarea>
+       
+        
+    </div> 
+    </div>
+      </div>
+      <script>
+          const FourWayBinding = {
+  data() {
+    return {
+      message: ''
+    }
+  }
+}
+Vue.createApp(FourWayBinding).mount('#four-way-binding')
+      </script>      
+
+
+<!--quatrieme module -->
+
+<div id="five-way-binding">
+    <div class="jumbotron"  style="background-color:white; padding: 0px; ">
+        
+
+<h5 style="white-space:pre-line;">Je veux mettre à votre service {{ message }}</h5>
+    <textarea v-model="message" placeholder="Indiquer vos points forts (par exemple: mon sens commercial; mon service client)."></textarea>
+       
+        
+    </div> 
+    </div>
+      </div>
+      <script>
+          const FiveWayBinding = {
+  data() {
+    return {
+      message: ''
+    }
+  }
+}
+Vue.createApp(FiveWayBinding).mount('#five-way-binding')
+      </script>      
+
+<!--cinqieme module -->  
+
+<div id="six-way-binding">
+    <div class="jumbotron"  style="background-color:white; padding: 0px; ">
+        
+
+<h5 style="white-space:pre-line;">Je suis immédiatement disponible pour intégrer votre équipe. Mon {{ message }}</h5>
+    <textarea v-model="message" placeholder="Indiquez vos qualités (par exemple: mon enthousiasme)."></textarea>
+       
+        
+    </div> 
+    </div>
+      </div>
+      <script>
+          const SixWayBinding = {
+  data() {
+    return {
+      message: ''
+    }
+  }
+}
+Vue.createApp(SixWayBinding).mount('#six-way-binding')
+      </script>      
+
+ <!--sixieme module -->     
+
+ <div id="seven-way-binding">
+    <div class="jumbotron"  style="background-color:white; padding: 0px; ">
+        
+
+<h5 style="white-space:pre-line;">vous aidera à {{ message }}</h5>
+    <textarea v-model="message" placeholder="Les objectifs de l'entreprise (par exemple: augmenter votre chiffres d'affaires )."></textarea>
+       
+        
+    </div> 
+    </div>
+      </div>
+      <script>
+          const SevenWayBinding = {
+  data() {
+    return {
+      message: ''
+    }
+  }
+}
+Vue.createApp(SevenWayBinding).mount('#seven-way-binding')
+      </script>      
+
+<h5>Veuillez agréer, Madame, Monsieur, l'expression de mes sentiments respectueux.</h5>
+ <!--septieme module -->   
+ 
+ <div id="eight-way-binding">
+    <div class="jumbotron"  style="background-color:white; padding: 0px; ">
+        
+
+<h5 style="white-space:pre-line;"> {{ message }}</h5>
+    <textarea v-model="message" placeholder="Nom/Prénom"></textarea>
+       
+        
+    </div> 
+    </div>
+      </div>
+      <script>
+          const EightWayBinding = {
+  data() {
+    return {
+      message: ''
+    }
+  }
+}
+Vue.createApp(EightWayBinding).mount('#eight-way-binding')
+      </script>
+
+<footer>Copyright Danijel LUKOVIC</footer>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
